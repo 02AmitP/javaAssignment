@@ -1,0 +1,49 @@
+<html>
+<head>
+<script>
+  function validateForm(){
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+  alert("Fill all Details Compulsory");
+return false;
+  }
+}
+
+function Submitted() { 
+  document.getElementById("Submission").innerHTML = "Submission Completed!";
+}
+
+</script>
+</head>
+<body style="margin: 5% 5% 5% 5%; border: solid 0.25px #c2c2de;">
+<img src="http://www.tmv.edu.in/TMVImg/tmv_logo%20_2_Updated.png" alt="Banner" style="width:1920px;height:300px;">
+<h2 style="text-align:center">Examination form</h2>
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post" style="text-align:center">
+NAME :  <input type="text" name="fname">
+<br />
+<br />
+<hr />
+PRN No :  <input type="text" name="fname">
+<br />
+<br />
+<hr />
+SUBJECT :  <input type="text" name="fname">
+<br />
+<br />
+<input type="radio" id="Sem" name="Semester" value="SEM">
+<label>SEM 3</label><br>
+<input type="radio" id="Sem" name="Semester" value="SEM">
+<label>SEM 4</label><br>
+<hr />
+<input type="submit" value="Submit">
+<br/>
+<br/>
+<br/>
+<br/>
+<button type="button" onclick="Submitted()">Click Here once the form is Submitted</button>
+
+<p id="Submission">Submission Not Completed.</p>
+</form>
+
+</body>
+</html>
